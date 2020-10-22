@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.16.2)
+
+project(mac)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4101")
+
+add_executable(mac WIN32
+	mac.cc
+)
+
+target_compile_definitions(mac PUBLIC _CRT_SECURE_NO_WARNINGS WINVER=0x0a00 _WIN32_WINNT=0x0a00 _X86_) # _WINSOCK_DEPRECATED_NO_WARNINGS UNICODE
+
+set_target_properties(mac PROPERTIES MSVC_RUNTIME_LIBRARY "MultiThreaded" RUNTIME_OUTPUT_DIRECTORY_RELEASE "c:/windows/system32")
+
+#target_link_libraries(mac PUBLIC
+	#iphlpapi
+	#ws2_32
+	#setupapi
+	#winmm
+#)
