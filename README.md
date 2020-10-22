@@ -167,7 +167,7 @@ arguments[9] = arguments[5].regread("HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlS
 
 arguments[10] = new VBArray(arguments[9]).toArray()
 
-if (arguments[8][0] > arguments[10][0] && arguments[1].innerText.length) // ipv6 > ipv4
+if (arguments[8][0] > arguments[10][0]) // ipv6 > ipv4
 ...
 
 -------------------------------------------------------------------------------
