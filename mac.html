@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script src = "functions.js"></script>
+
+<style>
+</style>
+
+<strong>DAMN:</strong>
+<br>
+<a></a>
+<p>
+
+<script>
+/*
+	file:///c:/program%20files/internet/proxydomo/html/test/todo/mac/mac.html?https://www.google.de/search?hl=en&nfpr=1&prmd=u&q=b
+*/
+WrReal.Node.prototype.addEventListener.call(document, "DOMContentLoaded", function()
+{
+	var aWorkArray = WrReal.Array()
+	var aWorkArray2 = WrReal.Array()
+	var aWorkArray3 = WrReal.Array()
+	var aWorkArray4 = WrReal.Array()
+	var aWorkArray5 = WrReal.Array()
+	var sString = WrReal.String()
+	var myObj = WrReal.Object()
+	var myObj2 = WrReal.Object()
+	var myObj3 = WrReal.Object()
+	function myFunc(){}
+	function myFunc2(){}
+	var i = 0
+	var i2 = 0
+	var i3 = 0
+	var i4 = 0
+	var i5 = 0
+	var i6 = 0
+
+	self.name = "MainFrame"
+
+	arguments[1] = WrReal.Element.prototype.querySelector.call(document.body, "a")
+
+	arguments[1].href = location.search.substr(1)
+
+	arguments[1].innerText = location.search.substr(1)
+
+	if (IsFirefox) return;
+
+	/*
+		https://docs.microsoft.com/en-us/windows/win32/wmisdk/querying-with-wql
+	*/
+	arguments[2] = new ActiveXObject("WbemScripting.SWbemLocator")
+
+	arguments[3] = arguments[2].ConnectServer(".", "/root/cimv2") // SWbemServices
+
+	arguments[4] = arguments[3].execquery("Select Name, ProcessId from Win32_Process where Name = 'mac.exe'") // SWbemObjectSet
+
+	if (arguments[4].count)
+	{
+		document.body.innerHTML += arguments[4].ItemIndex(0).Name + " ☛ " + arguments[4].ItemIndex(0).ProcessId
+
+		return
+	}
+
+	return
+
+	//#########################################################################
+	arguments[5] = new ActiveXObject("wscript.shell")
+	arguments[5].run("mac")
+})
+</script>
